@@ -51,6 +51,19 @@ assname = optionsdata["assname"]
 
 print("Здравствуйте, " + name + ". Меня зовут, " + assname + ". Я буду вашим компьютерным ассистентом")
 
+year = datetime.datetime.today().strftime("%Y")
+day = datetime.datetime.today().strftime("%d")
+month = datetime.datetime.today().strftime("%m")
+fulltime = datetime.datetime.today().strftime("%H:%M:%S")
+
+intyear = int(year)
+to2038 = 2038 - intyear
+
+print("Сегодня "+year+" год, "+day+" день и "+month+" месяц. Время "+fulltime)
+print("Берегись, до 2038 года осталось "+ str(to2038) + " лет")
+
+
+
 
 s = 1
 while s not in ["пока"]:
@@ -58,11 +71,15 @@ while s not in ["пока"]:
     if s in ["настройки", "настроить"]:
         #Перезапись настроек
 
-        name = input("Ведите ваше имя: ")
-        assname = input("Назовите меня: ")
+        name = input("Ведите ваше имя(прошлое имя "+name+"): ")
+        assname = input("Назовите меня(прошлое имя "+assname+"): ")
         optionsdata = {
                 "name": name,   
                 "assname": assname
             }
         with open("options.tardis", "w", encoding = "utf-8") as options:
             json.dump(optionsdata, options)
+
+    elif s in ["привет", "здравствуй"]:
+       privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
+       print(random.choice(privetstvia))
