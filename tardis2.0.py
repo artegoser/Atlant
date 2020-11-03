@@ -1,41 +1,34 @@
-import datetime
 import webbrowser
 import time
 import os
 import random
 import json
+from modules import *
 
-clear = "TARDIS------TARDIS------TARDIS------TARDIS--------artegoserdev---------------------------------------------------------\n"
-print(clear)
+clear = ["TARDIS------TARDIS------TARDIS------TARDIS--------artegoserdev---------------------------------------------------------"]
+def art(arte ,sleep = 0, sleep2 = 0.01):
+    for i in arte:
+        e = ""
+        for a in i:
+            e += a
+            print(e, end="\r")
+            time.sleep(sleep2)
+        print(e)
+        time.sleep(sleep)
+
+
+art(clear)
+
+cipher.ciphergenkey()
+
 vopr = 1
 otv = 1
-try:
-  os.mkdir("settings")
-except:
-  pass
-
 
 temp=0
 after_id = ''
 
 
-def xor_cipher( str, key ):
- encript_str = ""
- for letter in str:
-  encript_str += chr( ord(letter) ^ key )
- return encript_str
-def ciphergenkey():
-    cipherkey = "1234567890"
-    key = int(random.choice(cipherkey) + random.choice(cipherkey) + random.choice(cipherkey) + random.choice(cipherkey) + random.choice(cipherkey) + random.choice(cipherkey))
-    speak("Ваш ключ: " + str(key))
-
-
-#speak("Вас приветствует ТАРДИС. Голосовой помощник.\nЕсли хотите узнать больше информации напишите Информация.\nДля изменения настроек напишите настройки.")
-
-
-
 #Считывание настроек
-
 try:
     with open("options.tardis", "r", encoding = "utf-8") as options:
         optionsdata = json.load(options)
@@ -46,23 +39,19 @@ except:
             }
     with open("options.tardis", "w", encoding = "utf-8") as options:
             json.dump(optionsdata, options)
+
 name = optionsdata["name"]
 assname = optionsdata["assname"]
 
 print("Здравствуйте, " + name + ". Меня зовут, " + assname + ". Я буду вашим компьютерным ассистентом")
 
-year = datetime.datetime.today().strftime("%Y")
-day = datetime.datetime.today().strftime("%d")
-month = datetime.datetime.today().strftime("%m")
-fulltime = datetime.datetime.today().strftime("%H:%M:%S")
-
-intyear = int(year)
-to2038 = 2038 - intyear
+year = time.strftime("%Y")
+day = time.strftime("%d")
+month = time.strftime("%m")
+fulltime = time.strftime("%H:%M:%S")
 
 print("Сегодня "+year+" год, "+day+" день и "+month+" месяц. Время "+fulltime)
-print("Берегись, до 2038 года осталось "+ str(to2038) + " лет")
-
-
+print("Берегись, до 2038 года осталось "+ str(2038 - int(year)) + " лет")
 
 
 s = 1
