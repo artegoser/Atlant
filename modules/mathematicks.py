@@ -1,2 +1,4 @@
 def factorial(value):
-    #изучи сначала как писать функции
+    print(value)
+    
+factorial(10) #воспроизводит функцию
