@@ -6,4 +6,4 @@ def fact(v):
 
 def discriminant(a, b, c):
    D = int((b**2)-4*a*c)
-   return(D)
+   return D
