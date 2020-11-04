@@ -8,13 +8,13 @@ def discriminant(a, b, c):
    D = int((b**2)-4*a*c)
    return D
 
-def discKorni(a, b, c, D):
+def diskRoots(a, b, c, D):
     if D > 0 :
-     x1 = (-b + (D**0.5))/2a 
-     x2 = (-b - (D**0.5))/2a
+     x1 = (-b + (D**0.5))/(2*a)
+     x2 = (-b - (D**0.5))/(2*a)
      return x1, x2
     elif == 0 :
-     x = -(b\2a)
+     x = -(b\(2*a))
      return x
     else :
      return False
