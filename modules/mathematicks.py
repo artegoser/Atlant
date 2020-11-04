@@ -3,7 +3,7 @@ def fact(v):
     for factorial in range(1, v+1):
      i = i*factorial
     return i
-   
-print(fact(10)) #здесь функции проверяй
 
-s = input()
+def discriminant(a, b, c):
+   D = int((b**2)-4*a*c)
+   return(D)
