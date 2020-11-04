@@ -16,5 +16,5 @@ def discKorni(a, b, c, D):
     elif == 0 :
      x = -(b\2a)
      return x
-    else 
+    else :
      return False
