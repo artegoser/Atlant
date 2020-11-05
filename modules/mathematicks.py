@@ -26,11 +26,11 @@ def PCube (x):
     # периметр куба ,Общая длинна куба
     return 12*x
 def ASquare (x):
-    #Площадь одной стороны квадрата
+    #Площадь квадрата
     return x**2
 def ACube (x):
     #Площадь куба(поверхность)
-    return 6*(a**2)
+    return 6*(x**2)
 def VCube (x):
     #Объем куба
     return x**3

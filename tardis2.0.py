@@ -3,7 +3,8 @@ import time
 import os
 import random
 import json
-from modules import *
+from modules import cipher
+from modules import mathematicks as mathe
 
 clear = ["TARDIS------TARDIS------TARDIS------TARDIS--------artegoserdev---------------------------------------------------------"]
 def art(arte ,sleep = 0, sleep2 = 0.01):
@@ -56,19 +57,32 @@ print("Берегись, до 2038 года осталось "+ str(2038 - int(y
 
 s = 1
 while s not in ["пока"]:
-    s = input()
-    if s in ["настройки", "настроить"]:
-        #Перезапись настроек
+ try:
+        s = input()
+        if s in ["настройки", "настроить"]:
+            #Перезапись настроек
 
-        name = input("Ведите ваше имя(прошлое имя "+name+"): ")
-        assname = input("Назовите меня(прошлое имя "+assname+"): ")
-        optionsdata = {
-                "name": name,   
-                "assname": assname
-            }
-        with open("options.tardis", "w", encoding = "utf-8") as options:
-            json.dump(optionsdata, options)
+            name = input("Ведите ваше имя(прошлое имя "+name+"): ")
+            assname = input("Назовите меня(прошлое имя "+assname+"): ")
+            optionsdata = {
+                    "name": name,   
+                    "assname": assname
+                }
+            with open("options.tardis", "w", encoding = "utf-8") as options:
+                json.dump(optionsdata, options)
 
-    elif s in ["привет", "здравствуй"]:
-       privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
-       print(random.choice(privetstvia))
+        elif s in ["привет", "здравствуй"]:
+            privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
+            print(random.choice(privetstvia))
+            
+        elif s in ["math","математика"]:
+            print("Перехожу в режим вычислений,", name)
+            print("Чтобы выйти напишите \"esc\"")
+            while True:
+                s = input()
+                if s == "esc":
+                    break
+                eval("print("+s+")")
+ except Exception as e:
+    print(e)
+        
