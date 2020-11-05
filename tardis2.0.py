@@ -3,8 +3,7 @@ import time
 import os
 import random
 import json
-from modules import cipher
-from modules import mathematicks as mathe
+from modules import *
 
 clear = ["TARDIS------TARDIS------TARDIS------TARDIS--------artegoserdev---------------------------------------------------------"]
 def art(arte ,sleep = 0, sleep2 = 0.01):

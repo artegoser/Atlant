@@ -23,3 +23,7 @@ def cat(url):
     cat = requests.get(url, stream=True)
     textcat = cat.text
     return textcat
+
+def json(url):
+        jsone = requests.get(url)   
+        return jsone.json()
