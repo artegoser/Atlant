@@ -16,21 +16,23 @@ def diskRoots(a, b, c, D):
      return x
     else :
      return False
-def AreaRectangle(x, y):
+def ARect(x, y):
+    #площадь прямоугольника
     return x*y
-def PerRectangleb(x, y):
-    return (2*x)*(2*y)
-def OCube (x):
-    # пириметр куба ,Общая длинна 
-    return 12*x
+def PRect(x, y):
+    #периметр прямоугольника
+    return (2*x)+(2*y)
 def PCube (x):
-    #Площадь одной стороны
+    # периметр куба ,Общая длинна куба
+    return 12*x
+def ASquare (x):
+    #Площадь одной стороны квадрата
     return x**2
-def QCube (x):
+def ACube (x):
     #Площадь куба(поверхность)
     return 6*(a**2)
 def VCube (x):
     #Объем куба
-    return x
+    return x**3
 
    
