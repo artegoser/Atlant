@@ -3,7 +3,8 @@ import time
 import os
 import random
 import json
-from modules import *
+from modules import cipher
+from modules import mathematicks as mathe
 
 clear = ["TARDIS------TARDIS------TARDIS------TARDIS--------artegoserdev---------------------------------------------------------"]
 def art(arte ,sleep = 0, sleep2 = 0.01):
@@ -56,24 +57,66 @@ print("Берегись, до 2038 года осталось "+ str(2038 - int(y
 
 s = 1
 while s not in ["пока"]:
-    s = input()
-    if s in ["настройки", "настроить"]:
-        #Перезапись настроек
+ try:
+        s = input()
+        if s in ["настройки", "настроить"]:
+            #Перезапись настроек
 
-        name = input("Ведите ваше имя(прошлое имя "+name+"): ")
-        assname = input("Назовите меня(прошлое имя "+assname+"): ")
-        optionsdata = {
-                "name": name,   
-                "assname": assname
-            }
-        with open("options.tardis", "w", encoding = "utf-8") as options:
-            json.dump(optionsdata, options)
+            name = input("Ведите ваше имя(прошлое имя "+name+"): ")
+            assname = input("Назовите меня(прошлое имя "+assname+"): ")
+            optionsdata = {
+                    "name": name,   
+                    "assname": assname
+                }
+            with open("options.tardis", "w", encoding = "utf-8") as options:
+                json.dump(optionsdata, options)
 
-    elif s in ["привет", "здравствуй"]:
-       privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
-       print(random.choice(privetstvia))
-       
-    elif s in ["math","математика"]:
-        print("Перехожу в режим вычислений,", name)
-        #доделать
+        elif s in ["привет", "здравствуй"]:
+            privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
+            print(random.choice(privetstvia))
+            
+        elif s in ["math","математика"]:
+            print("Перехожу в режим вычислений,", name)
+            print("""
+                    \rпростой калькулятор(калькулятор)
+                    \rфакториал
+                    \rкорень квадратного уравнения
+                    \rдискриминант
+                    \rфигуры
+                    """)
+            
+            s = input("Выберите режим: ")
+                
+            if s == "фигуры":
+                print("""
+                    \rARect
+                    \r    #площадь прямоугольника
+        
+                    \rPRect
+                    \r    #периметр прямоугольника
+                        
+                    \rPCube
+                    \r    # периметр куба ,Общая длинна куба
+                        
+                    \rASquare
+                    \r    #Площадь квадрата
+                        
+                    \rACube
+                    \r    #Площадь куба(поверхность)
+                        
+                    \rVCube
+                    \r    #Объем куба
+                    """)
+                s = input("Выберите режим: ")  
+                if s == "ARect":
+                        print("Площадь прямоугольника =",
+                              mathe.ARect(float(input("Введите первую сторону прямоугольника: ")), 
+                                          float(input("Введите вторую сторону прямоугольника: "))))
+                elif s == "PRect":
+                    print("Периметр прямоугольника =",
+                          mathe.PRect(float(input("Введите первую сторону прямоугольника: ")), 
+                                      float(input("Введите вторую сторону прямоугольника: "))))
+                
+ except Exception as e:
+    print(e)
         
