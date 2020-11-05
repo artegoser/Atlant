@@ -72,3 +72,8 @@ while s not in ["пока"]:
     elif s in ["привет", "здравствуй"]:
        privetstvia = ["Здравствуйте, повелитель", "Здравствуйте, "+name, "Привет, я "+assname+" если вы забыли, "+ name]
        print(random.choice(privetstvia))
+       
+    elif s in ["math","математика"]:
+        print("Перехожу в режим вычислений,", name)
+        #доделать
+        
