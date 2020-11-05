@@ -78,10 +78,21 @@ while s not in ["пока"]:
             print("Перехожу в режим вычислений,", name)
             print("Чтобы выйти напишите \"esc\"")
             while True:
-                s = input()
+                s = input("> ")
                 if s == "esc":
                     break
                 eval("print("+s+")")
+                
+        elif s in ["скачать", "download"]:
+            s = input("Выберите: прочитать(файл здесь) или скачать(файл на компьютер): ")
+            if s == "прочитать":
+                url = input("Введите ссылку: ")
+                print(downloads.cat(url))
+            elif s == "скачать":
+                filein = input("Введите ссылку: ")
+                fileto = input("Введите название файла: ")
+                downloads.download(filein, fileto)
+                print("Успешно скачано")
  except Exception as e:
     print(e)
         
