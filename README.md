@@ -1,6 +1,6 @@
 # tardis-v2.0
 Computer Assistant
 
-# What he can? 
-He can all.  
-Really
+# Что он может?   
+
+    Это сборник многих вещей. Просто удобный инструмент для всего
