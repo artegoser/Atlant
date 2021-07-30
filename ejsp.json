@@ -1,5 +1,17 @@
 {
     "dir":"src/",
     "outdir":"build/",
-    "vars":{}
+    "vars":{
+        "lang":"ru-ru",
+        "locales":{
+            "ru-ru":{
+                "theme":"Темная/светлая тема",
+                "planner":"Планировщик"
+            },
+            "en-us":{
+                "theme":"Dark/Light theme",
+                "planner":"Planner"
+            }
+        }
+    }
 }

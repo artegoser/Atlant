@@ -1,0 +1,9 @@
+.c-menu{
+    background-color: #d1d1d1;
+    transition: 1s;
+}
+.logo{
+    color: white !important;
+    background-color: #373737; 
+    transition: 1s;
+}
