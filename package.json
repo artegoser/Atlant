@@ -1,0 +1,33 @@
+{
+  "name": "tardis-v3",
+  "version": "3.0.0",
+  "description": "Computer asistant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "bstart": "ejsp && electron .",
+    "build":"ejsp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artegoser/tardis-v3.git"
+  },
+  "keywords": [
+    "assistant",
+    "computer",
+    "tardis",
+    "helper"
+  ],
+  "author": "artegoser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artegoser/tardis-v3/issues"
+  },
+  "homepage": "https://github.com/artegoser/tardis-v3#readme",
+  "devDependencies": {
+    "ejsp": "^1.0.2",
+    "electron": "^13.1.7"
+  },
+  "dependencies": {}
+}
