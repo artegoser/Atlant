@@ -11,12 +11,13 @@ app.on("ready", () => {
     minHeight: SIZE.y,
     webPreferences: {
       devTools: true,
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false
     }
   });
-  win.removeMenu();
   win.webContents.on("dom-ready", () => {
     win.webContents.openDevTools();
+    win.removeMenu();
   });
   win.loadURL(`file://${__dirname}/build/pages/index.html`);
 });
