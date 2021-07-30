@@ -7,12 +7,12 @@ let menu = [
 ]
 %> 
 
-<nav class="navbar navbar-expand-lg navbar-light c-menu" id="menu">
+<nav class="navbar navbar-expand-lg navbar-light c-menu" id="menu" style="-webkit-app-region: drag;">
   <div class="logo navbar-brand">TARDIS</div>
   <button class="navbar-toggler"style="margin-right: 10px"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon" style="-webkit-app-region: no-drag;"></span>
   </button>
-  <div class="collapse navbar-collapse" style="margin-left: 20px;" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" style="margin-left: 20px;-webkit-app-region: no-drag;" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <%
             for(let i=0; i<menu.length; i++) {

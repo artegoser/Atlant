@@ -1,4 +1,6 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Tray } = require("electron");
+let tray = null;
+
 
 const SIZE = {
   x: 695,
@@ -6,9 +8,11 @@ const SIZE = {
 };
 
 app.on("ready", () => {
+  tray = new Tray('./ico.ico');
   const win = new BrowserWindow({
     minWidth: SIZE.x,
     minHeight: SIZE.y,
+    frame:false,
     webPreferences: {
       devTools: true,
       nodeIntegration: true,
@@ -20,4 +24,14 @@ app.on("ready", () => {
     win.removeMenu();
   });
   win.loadURL(`file://${__dirname}/build/pages/index.html`);
+  
+  tray.on('click', function(e){
+    if (win.isVisible()) {
+      win.hide();
+    } else {
+      win.show();
+    }
+  });
+
+
 });
