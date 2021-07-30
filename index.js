@@ -13,6 +13,7 @@ app.on("ready", () => {
     minWidth: SIZE.x,
     minHeight: SIZE.y,
     frame:false,
+    icon:'./ico.ico',
     webPreferences: {
       devTools: true,
       nodeIntegration: true,
