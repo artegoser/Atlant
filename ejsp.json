@@ -6,11 +6,13 @@
         "locales":{
             "ru-ru":{
                 "theme":"Темная/светлая тема",
-                "planner":"Планировщик"
+                "planner":"Планировщик",
+                "tardis":"ТАРДИС"
             },
             "en-us":{
                 "theme":"Dark/Light theme",
-                "planner":"Planner"
+                "planner":"Planner",
+                "tardis":"TARDIS"
             }
         }
     }

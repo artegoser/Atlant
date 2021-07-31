@@ -1,0 +1,1121 @@
+{
+  "settings": {
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "nlu": {
+      "log": true
+    }
+  },
+  "nluManager": {
+    "settings": {
+      "log": true
+    },
+    "languages": [
+      "ru",
+      "en"
+    ],
+    "intentDomains": {},
+    "domainManagers": {
+      "ru": {
+        "settings": {
+          "language": "ru",
+          "log": true,
+          "useNoneFeature": true,
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.7,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.08,
+            "log": true,
+            "timeout": 120000
+          }
+        },
+        "language": "ru",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": false,
+        "keepStopwords": true,
+        "stemDict": {
+          "привет": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "здравств": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "приветств": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "даров": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "тевирп": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "прив": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "хелло": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "ха": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "ку": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "ден,добр": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "досвидан": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "пок": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "дума,мне,пор": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "до,завтр": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "ба,ба": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "покедов": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "не,разговарива,с,так,я": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "досвидул": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "ча": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "ид,нахер": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "кто,ты": {
+            "domain": "default",
+            "intent": "help.who"
+          },
+          "зовут,как,теб": {
+            "domain": "default",
+            "intent": "help.who"
+          },
+          "вообщ,да,кто,так,ты": {
+            "domain": "default",
+            "intent": "help.who"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default",
+          "greet.bye": "default",
+          "help.who": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "ru",
+              "log": true,
+              "useNoneFeature": true,
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.7,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.08,
+                "log": true,
+                "timeout": 120000
+              }
+            },
+            "language": "ru",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "привет"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "здравств"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "приветств"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "даров"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "тевирп"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "прив"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "хелло"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "ха"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "ку"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "добр",
+                  "ден"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "досвидан"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "пок"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "дума",
+                  "мне",
+                  "пор"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "до",
+                  "завтр"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "ба",
+                  "ба"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "покедов"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "я",
+                  "с",
+                  "так",
+                  "не",
+                  "разговарива"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "досвидул"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "ча"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "ид",
+                  "нахер"
+                ]
+              },
+              {
+                "intent": "help.who",
+                "tokens": [
+                  "ты",
+                  "кто"
+                ]
+              },
+              {
+                "intent": "help.who",
+                "tokens": [
+                  "как",
+                  "теб",
+                  "зовут"
+                ]
+              },
+              {
+                "intent": "help.who",
+                "tokens": [
+                  "да",
+                  "кто",
+                  "ты",
+                  "так",
+                  "вообщ"
+                ]
+              }
+            ],
+            "features": {
+              "привет": 1,
+              "здравств": 1,
+              "приветств": 1,
+              "даров": 1,
+              "тевирп": 1,
+              "прив": 1,
+              "хелло": 1,
+              "ха": 1,
+              "ку": 1,
+              "добр": 1,
+              "ден": 1,
+              "досвидан": 1,
+              "пок": 1,
+              "дума": 1,
+              "мне": 1,
+              "пор": 1,
+              "до": 1,
+              "завтр": 1,
+              "ба": 2,
+              "покедов": 1,
+              "я": 1,
+              "с": 1,
+              "так": 2,
+              "не": 1,
+              "разговарива": 1,
+              "досвидул": 1,
+              "ча": 1,
+              "ид": 1,
+              "нахер": 1,
+              "ты": 2,
+              "кто": 2,
+              "как": 1,
+              "теб": 1,
+              "зовут": 1,
+              "да": 1,
+              "вообщ": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "ru",
+                "log": true,
+                "useNoneFeature": true,
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.7,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.08,
+                  "log": true,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  37,
+                  4
+                ],
+                "layers": [
+                  {
+                    "привет": {},
+                    "здравств": {},
+                    "приветств": {},
+                    "даров": {},
+                    "тевирп": {},
+                    "прив": {},
+                    "хелло": {},
+                    "ха": {},
+                    "ку": {},
+                    "добр": {},
+                    "ден": {},
+                    "досвидан": {},
+                    "пок": {},
+                    "дума": {},
+                    "мне": {},
+                    "пор": {},
+                    "до": {},
+                    "завтр": {},
+                    "ба": {},
+                    "покедов": {},
+                    "я": {},
+                    "с": {},
+                    "так": {},
+                    "не": {},
+                    "разговарива": {},
+                    "досвидул": {},
+                    "ча": {},
+                    "ид": {},
+                    "нахер": {},
+                    "ты": {},
+                    "кто": {},
+                    "как": {},
+                    "теб": {},
+                    "зовут": {},
+                    "да": {},
+                    "вообщ": {},
+                    "nonefeature": {}
+                  },
+                  {
+                    "greet.hello": {
+                      "bias": 5.66421537,
+                      "weights": {
+                        "привет": 6.796977997,
+                        "здравств": 6.802570343,
+                        "приветств": 6.780360699,
+                        "даров": 6.756266594,
+                        "тевирп": 6.730311394,
+                        "прив": 6.702526093,
+                        "хелло": 6.672941685,
+                        "ха": 6.641592026,
+                        "ку": 6.608514786,
+                        "добр": 3.380033731,
+                        "ден": 3.380033731,
+                        "досвидан": -5.670743465,
+                        "пок": -5.648237228,
+                        "дума": -1.950545073,
+                        "мне": -1.950545073,
+                        "пор": -1.950545073,
+                        "до": -2.88347435,
+                        "завтр": -2.88347435,
+                        "ба": -5.614215374,
+                        "покедов": -5.587131023,
+                        "я": -1.081587791,
+                        "с": -1.081587791,
+                        "так": -1.377206445,
+                        "не": -1.081587791,
+                        "разговарива": -1.081587791,
+                        "досвидул": -5.556514263,
+                        "ча": -5.525803089,
+                        "ид": -2.832276344,
+                        "нахер": -2.832276344,
+                        "ты": -2.830950737,
+                        "кто": -2.830950737,
+                        "как": -1.890118599,
+                        "теб": -1.890118599,
+                        "зовут": -1.890118599,
+                        "да": -0.295618564,
+                        "вообщ": -0.295618564,
+                        "nonefeature": -5.457821846
+                      }
+                    },
+                    "greet.bye": {
+                      "bias": 4.520642315,
+                      "weights": {
+                        "привет": -4.490492344,
+                        "здравств": -4.471809864,
+                        "приветств": -4.451776028,
+                        "даров": -4.430420876,
+                        "тевирп": -4.407778263,
+                        "прив": -4.383881569,
+                        "хелло": -4.358764648,
+                        "ха": -4.332462788,
+                        "ку": -4.305011749,
+                        "добр": -2.221098185,
+                        "ден": -2.221098185,
+                        "досвидан": 7.936076164,
+                        "пок": 7.932363033,
+                        "дума": 2.67597127,
+                        "мне": 2.67597127,
+                        "пор": 2.67597127,
+                        "до": 4.016437531,
+                        "завтр": 4.016437531,
+                        "ба": 7.889303684,
+                        "покедов": 7.85344553,
+                        "я": 1.778816104,
+                        "с": 1.778816104,
+                        "так": 0.889962018,
+                        "не": 1.778816104,
+                        "разговарива": 1.778816104,
+                        "досвидул": 7.81153965,
+                        "ча": 7.769360065,
+                        "ид": 3.977403164,
+                        "нахер": 3.977403164,
+                        "ты": -2.533371449,
+                        "кто": -2.533371449,
+                        "как": -1.709127069,
+                        "теб": -1.709127069,
+                        "зовут": -1.709127069,
+                        "да": -0.888854802,
+                        "вообщ": -0.888854802,
+                        "nonefeature": -4.508797646
+                      }
+                    },
+                    "help.who": {
+                      "bias": 0.475500082,
+                      "weights": {
+                        "привет": -0.513541758,
+                        "здравств": -0.503134668,
+                        "приветств": -0.494579345,
+                        "даров": -0.487692118,
+                        "тевирп": -0.482533932,
+                        "прив": -0.478927225,
+                        "хелло": -0.476607174,
+                        "ха": -0.475195289,
+                        "ку": -0.473861963,
+                        "добр": -0.255933434,
+                        "ден": -0.255933434,
+                        "досвидан": -0.471937239,
+                        "пок": -0.470267683,
+                        "дума": -0.175204858,
+                        "мне": -0.175204858,
+                        "пор": -0.175204858,
+                        "до": -0.239981085,
+                        "завтр": -0.239981085,
+                        "ба": -0.467709601,
+                        "покедов": -0.46566692,
+                        "я": -0.40894869,
+                        "с": -0.40894869,
+                        "так": -0.235796198,
+                        "не": -0.40894869,
+                        "разговарива": -0.40894869,
+                        "досвидул": -0.462821305,
+                        "ча": -0.460412323,
+                        "ид": -0.235578552,
+                        "нахер": -0.235578552,
+                        "ты": 5.971039772,
+                        "кто": 5.971039772,
+                        "как": 4.006857872,
+                        "теб": 4.006857872,
+                        "зовут": 4.006857872,
+                        "да": 0.17315276,
+                        "вообщ": 0.17315276,
+                        "nonefeature": -0.52579695
+                      }
+                    },
+                    "None": {
+                      "bias": 0.603136902,
+                      "weights": {
+                        "привет": -0.606857121,
+                        "здравств": -0.603997588,
+                        "приветств": -0.601634562,
+                        "даров": -0.599097848,
+                        "тевирп": -0.59637028,
+                        "прив": -0.593456626,
+                        "хелло": -0.590362012,
+                        "ха": -0.587091208,
+                        "ку": -0.583649576,
+                        "добр": -0.29949367,
+                        "ден": -0.29949367,
+                        "досвидан": -0.578993678,
+                        "пок": -0.575133383,
+                        "дума": -0.19867222,
+                        "мне": -0.19867222,
+                        "пор": -0.19867222,
+                        "до": -0.297032386,
+                        "завтр": -0.297032386,
+                        "ба": -0.569121897,
+                        "покедов": -0.564806521,
+                        "я": -0.113866143,
+                        "с": -0.113866143,
+                        "так": -0.137043491,
+                        "не": -0.113866143,
+                        "разговарива": -0.113866143,
+                        "досвидул": -0.559878409,
+                        "ча": -0.555195808,
+                        "ид": -0.290765762,
+                        "нахер": -0.290765762,
+                        "ты": -0.290274858,
+                        "кто": -0.290274858,
+                        "как": -0.194656014,
+                        "теб": -0.194656014,
+                        "зовут": -0.194656014,
+                        "да": -0.023177424,
+                        "вообщ": -0.023177424,
+                        "nonefeature": 11.641726494
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "fixedError": false,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.7,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.08,
+                  "maxDecimals": 9,
+                  "log": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "en": {
+        "settings": {
+          "language": "en",
+          "log": true,
+          "useNoneFeature": true,
+          "config": {
+            "activation": "leaky-relu",
+            "hiddenLayers": [],
+            "iterations": 20000,
+            "learningRate": 0.7,
+            "errorThresh": 0.00005,
+            "momentum": 0.5,
+            "deltaErrorThresh": 0.000001,
+            "maxDecimals": 9,
+            "leakyReluAlpha": 0.08,
+            "log": true,
+            "timeout": 120000
+          }
+        },
+        "language": "en",
+        "nluClassName": "BrainNLU",
+        "useMasterDomain": true,
+        "trainByDomain": false,
+        "keepStopwords": true,
+        "stemDict": {
+          "hi": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "hello": {
+            "domain": "default",
+            "intent": "greet.hello"
+          },
+          "bye": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "goodby": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "later,see,you": {
+            "domain": "default",
+            "intent": "greet.bye"
+          },
+          "are,who,you": {
+            "domain": "default",
+            "intent": "help.who"
+          },
+          "is,name,what,your": {
+            "domain": "default",
+            "intent": "help.who"
+          }
+        },
+        "intentDict": {
+          "greet.hello": "default",
+          "greet.bye": "default",
+          "help.who": "default"
+        },
+        "useStemDict": true,
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "language": "en",
+              "log": true,
+              "useNoneFeature": true,
+              "config": {
+                "activation": "leaky-relu",
+                "hiddenLayers": [],
+                "iterations": 20000,
+                "learningRate": 0.7,
+                "errorThresh": 0.00005,
+                "momentum": 0.5,
+                "deltaErrorThresh": 0.000001,
+                "maxDecimals": 9,
+                "leakyReluAlpha": 0.08,
+                "log": true,
+                "timeout": 120000
+              }
+            },
+            "language": "en",
+            "keepStopwords": true,
+            "docs": [
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "hi"
+                ]
+              },
+              {
+                "intent": "greet.hello",
+                "tokens": [
+                  "hello"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "bye"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "goodby"
+                ]
+              },
+              {
+                "intent": "greet.bye",
+                "tokens": [
+                  "see",
+                  "you",
+                  "later"
+                ]
+              },
+              {
+                "intent": "help.who",
+                "tokens": [
+                  "who",
+                  "are",
+                  "you"
+                ]
+              },
+              {
+                "intent": "help.who",
+                "tokens": [
+                  "what",
+                  "is",
+                  "your",
+                  "name"
+                ]
+              }
+            ],
+            "features": {
+              "hi": 1,
+              "hello": 1,
+              "bye": 1,
+              "goodby": 1,
+              "see": 1,
+              "you": 2,
+              "later": 1,
+              "who": 1,
+              "are": 1,
+              "what": 1,
+              "is": 1,
+              "your": 1,
+              "name": 1
+            },
+            "isEditing": false,
+            "className": "BrainNLU",
+            "classifier": {
+              "className": "BrainClassifier",
+              "settings": {
+                "language": "en",
+                "log": true,
+                "useNoneFeature": true,
+                "config": {
+                  "activation": "leaky-relu",
+                  "hiddenLayers": [],
+                  "iterations": 20000,
+                  "learningRate": 0.7,
+                  "errorThresh": 0.00005,
+                  "momentum": 0.5,
+                  "deltaErrorThresh": 0.000001,
+                  "maxDecimals": 9,
+                  "leakyReluAlpha": 0.08,
+                  "log": true,
+                  "timeout": 120000
+                }
+              },
+              "labels": [],
+              "network": {
+                "sizes": [
+                  14,
+                  4
+                ],
+                "layers": [
+                  {
+                    "hi": {},
+                    "hello": {},
+                    "bye": {},
+                    "goodby": {},
+                    "see": {},
+                    "you": {},
+                    "later": {},
+                    "who": {},
+                    "are": {},
+                    "what": {},
+                    "is": {},
+                    "your": {},
+                    "name": {},
+                    "nonefeature": {}
+                  },
+                  {
+                    "greet.hello": {
+                      "bias": 3.217618967,
+                      "weights": {
+                        "hi": 9.146893501,
+                        "hello": 9.136427879,
+                        "bye": -3.162408829,
+                        "goodby": -3.145369053,
+                        "see": -0.805930018,
+                        "you": -1.611667037,
+                        "later": -0.805930018,
+                        "who": -0.805737257,
+                        "are": -0.805737257,
+                        "what": -0.805798233,
+                        "is": -0.805798233,
+                        "your": -0.805798233,
+                        "name": -0.805798233,
+                        "nonefeature": -3.116362095
+                      }
+                    },
+                    "greet.bye": {
+                      "bias": 3.630485621,
+                      "weights": {
+                        "hi": -3.532782078,
+                        "hello": -3.511770725,
+                        "bye": 8.744941711,
+                        "goodby": 8.734490395,
+                        "see": 3.77823329,
+                        "you": 1.305616856,
+                        "later": 3.77823329,
+                        "who": -2.472617149,
+                        "are": -2.472617149,
+                        "what": -0.920224547,
+                        "is": -0.920224547,
+                        "your": -0.920224547,
+                        "name": -0.920224547,
+                        "nonefeature": -3.557446957
+                      }
+                    },
+                    "help.who": {
+                      "bias": 0.802067951,
+                      "weights": {
+                        "hi": -0.812851667,
+                        "hello": -0.805426359,
+                        "bye": -0.801946282,
+                        "goodby": -0.799946249,
+                        "see": -1.762488484,
+                        "you": 2.723941088,
+                        "later": -1.762488484,
+                        "who": 4.486430645,
+                        "are": 4.486430645,
+                        "what": 2.924432278,
+                        "is": 2.924432278,
+                        "your": 2.924432278,
+                        "name": 2.924432278,
+                        "nonefeature": -0.824081421
+                      }
+                    },
+                    "None": {
+                      "bias": 1.617983215,
+                      "weights": {
+                        "hi": -1.57954967,
+                        "hello": -1.570169687,
+                        "bye": -1.560312748,
+                        "goodby": -1.549954772,
+                        "see": -0.40141964,
+                        "you": -0.802554786,
+                        "later": -0.40141964,
+                        "who": -0.401135355,
+                        "are": -0.401135355,
+                        "what": -0.401197493,
+                        "is": -0.401197493,
+                        "your": -0.401197493,
+                        "name": -0.401197493,
+                        "nonefeature": 10.688391685
+                      }
+                    }
+                  }
+                ],
+                "trainOpts": {
+                  "iterations": 20000,
+                  "errorThresh": 0.00005,
+                  "fixedError": false,
+                  "deltaErrorThresh": 0.000001,
+                  "learningRate": 0.7,
+                  "momentum": 0.5,
+                  "leakyReluAlpha": 0.08,
+                  "maxDecimals": 9,
+                  "log": true
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "extraSentences": [
+      [
+        "ru",
+        "Привет"
+      ],
+      [
+        "ru",
+        "Здравствуйте"
+      ],
+      [
+        "ru",
+        "Приветствую"
+      ],
+      [
+        "ru",
+        "Дарова"
+      ],
+      [
+        "ru",
+        "Тевирп"
+      ],
+      [
+        "ru",
+        "Прив"
+      ],
+      [
+        "ru",
+        "Хеллоу"
+      ],
+      [
+        "ru",
+        "Хай"
+      ],
+      [
+        "ru",
+        "Ку"
+      ],
+      [
+        "ru",
+        "Добрый день"
+      ],
+      [
+        "ru",
+        "Досвидания"
+      ],
+      [
+        "ru",
+        "Пока"
+      ],
+      [
+        "ru",
+        "Думаю мне пора"
+      ],
+      [
+        "ru",
+        "До завтра"
+      ],
+      [
+        "ru",
+        "Бай бай"
+      ],
+      [
+        "ru",
+        "Покедова"
+      ],
+      [
+        "ru",
+        "Я с такими не разговариваю"
+      ],
+      [
+        "ru",
+        "Досвидули"
+      ],
+      [
+        "ru",
+        "Чао"
+      ],
+      [
+        "ru",
+        "Иди нахер"
+      ],
+      [
+        "ru",
+        "Ты кто?"
+      ],
+      [
+        "ru",
+        "Как тебя зовут?"
+      ],
+      [
+        "ru",
+        "Да кто ты такой вообще?"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "Bye!"
+      ],
+      [
+        "en",
+        "Goodbye!"
+      ],
+      [
+        "en",
+        "See you later!"
+      ],
+      [
+        "en",
+        "Who are you?"
+      ],
+      [
+        "en",
+        "What is your name?"
+      ]
+    ]
+  },
+  "nerManager": {
+    "settings": {},
+    "threshold": 0.8,
+    "builtins": [
+      "Number",
+      "Ordinal",
+      "Percentage",
+      "Age",
+      "Currency",
+      "Dimension",
+      "Temperature",
+      "DateTime",
+      "PhoneNumber",
+      "IpAddress",
+      "Boolean",
+      "Email",
+      "Hashtag",
+      "URL"
+    ],
+    "namedEntities": {}
+  },
+  "slotManager": {},
+  "responses": {
+    "ru": {
+      "greet.hello": [
+        {
+          "response": "Привет"
+        },
+        {
+          "response": "Тардис приветствует"
+        },
+        {
+          "response": "Хей йоу здарова"
+        }
+      ],
+      "greet.bye": [
+        {
+          "response": "Ладно, досвидания"
+        },
+        {
+          "response": "Увидимся завтра"
+        },
+        {
+          "response": "Пока"
+        }
+      ],
+      "help.who": [
+        {
+          "response": "Моё имя ТАРДИС"
+        },
+        {
+          "response": "Я ваш ассистент ТАРДИС"
+        },
+        {
+          "response": "Точно не помню, но похоже меня зовут ТАРДИС"
+        }
+      ]
+    },
+    "en": {
+      "greet.hello": [
+        {
+          "response": "Hi!"
+        },
+        {
+          "response": "Hello!"
+        }
+      ],
+      "greet.bye": [
+        {
+          "response": "Bye!"
+        },
+        {
+          "response": "Goodbye!"
+        },
+        {
+          "response": "See you later!"
+        }
+      ],
+      "help.who": [
+        {
+          "response": "My name is TARDIS"
+        },
+        {
+          "response": "I am your assistant called the TARDIS"
+        }
+      ]
+    }
+  },
+  "actions": {},
+  "utteranceDict": {
+    "?": "help"
+  }
+}

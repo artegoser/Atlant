@@ -1,13 +1,17 @@
 <% 
 let menu = [
     {
+        title:locales[lang].tardis,
+        url:"./tardis.html"
+    },
+    {
         title:locales[lang].planner,
         url:"./planner.html"
     }
 ]
 %> 
 
-<nav class="navbar navbar-expand-lg navbar-light c-menu" id="menu" style="-webkit-app-region: drag;">
+<nav class="navbar navbar-expand-lg navbar-light c-menu fixed-top" id="menu" style="-webkit-app-region: drag;">
   <div class="logo navbar-brand">TARDIS</div>
   <button class="navbar-toggler"style="margin-right: 10px"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon" style="-webkit-app-region: no-drag;"></span>
@@ -36,4 +40,7 @@ let menu = [
         </svg>
     </a>
   </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light c-menu">
+    <div class="logo navbar-brand">TARDIS</div>
 </nav>

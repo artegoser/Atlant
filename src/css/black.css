@@ -6,6 +6,21 @@
 .c-menu-link{
     color: #f4f4f4 !important;
 }
+.c-text{
+    color: #f4f4f4 !important;
+    transition: 1s;
+}
+.chat-text{
+    color: #ffffff !important;
+}
+.in-chat{
+    background-color: #979797;
+    transition: 1s;
+}
+.out-chat{
+    background-color: #6b6b6b;
+    transition: 1s;
+}
 .logo{
     background-color: #979797 !important;
     color: black;

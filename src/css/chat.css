@@ -1,0 +1,13 @@
+.in-chat{
+    margin: 5px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.out-chat{
+    text-align: right;
+    margin: 5px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
