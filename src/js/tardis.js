@@ -13,7 +13,7 @@ window.addEventListener("load", ()=>{
     function addin(text){
         let div = document.createElement('div');
         div.className = "row chat-text in-chat";
-        div.innerHTML = `<div class="col-6"><div class="row">TARDIS</div><div class="row">${text}</div></div>`;
+        div.innerHTML = `<div class="col"><div class="row">TARDIS</div><div class="row">${text}</div></div>`;
         document.getElementById("chat-body").append(div);
     }
     function addout(text){
@@ -26,6 +26,7 @@ window.addEventListener("load", ()=>{
         let message = document.getElementById("message");
         addout(message.value);
         const response = await manager.process(message.value);
+        if(response.intent==="help.version") response.answer += "TARDIS 3.0.0-alpha";
         addin(response.answer||"Извините я не понял");
         message.value = "";
     }
