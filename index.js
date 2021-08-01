@@ -15,7 +15,7 @@ app.on("ready", () => {
     frame:false,
     icon:'./ico.ico',
     webPreferences: {
-      devTools: false,
+      devTools: true,
       nodeIntegration: true,
       contextIsolation: false
     }

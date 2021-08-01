@@ -12,22 +12,30 @@ window.addEventListener("load", ()=>{
 
     function addin(text){
         let div = document.createElement('div');
-        div.className = "row chat-text in-chat";
+        div.className = "row chat-text in-chat animate__fadeInLeft";
+        div.id = "toanim";
         div.innerHTML = `<div class="col"><div class="row">TARDIS</div><div class="row">${text}</div></div>`;
         document.getElementById("chat-body").append(div);
+        document.getElementById("toanim").classList.add('animate__animated');
+        document.getElementById("toanim").id = "anim";
     }
     function addout(text){
         let div = document.createElement('div');
-        div.className = "row chat-text out-chat";
+        div.className = "row chat-text out-chat animate__fadeInLeft";
+        div.id = "toanim";
         div.innerHTML = `<div class="col">${text}</div>`;
         document.getElementById("chat-body").append(div);
+        document.getElementById("toanim").classList.add('animate__animated');
+        document.getElementById("toanim").id = "anim";
     }
     async function getresp(){
         let message = document.getElementById("message");
         addout(message.value);
         const response = await manager.process(message.value);
-        if(response.intent==="help.version") response.answer += "TARDIS 3.0.0-alpha";
-        addin(response.answer||"Извините я не понял");
-        message.value = "";
+        setTimeout(()=>{
+            if(response.intent==="help.version") response.answer += "TARDIS 3.0.0-alpha";
+            addin(response.answer||"Извините я не понял");
+            message.value = "";
+        }, 500);
     }
 });
