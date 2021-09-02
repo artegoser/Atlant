@@ -18,6 +18,7 @@ window.addEventListener("load", ()=>{
         document.getElementById("chat-body").append(div);
         document.getElementById("toanim").classList.add('animate__animated');
         document.getElementById("toanim").id = "anim";
+        window.scrollTo(0, document.body.scrollHeight)
     }
     function addout(text){
         let div = document.createElement('div');
@@ -27,15 +28,16 @@ window.addEventListener("load", ()=>{
         document.getElementById("chat-body").append(div);
         document.getElementById("toanim").classList.add('animate__animated');
         document.getElementById("toanim").id = "anim";
+        window.scrollTo(0, document.body.scrollHeight)
     }
     async function getresp(){
         let message = document.getElementById("message");
         addout(message.value);
         const response = await manager.process(message.value);
+        message.value = "";
         setTimeout(()=>{
             if(response.intent==="help.version") response.answer += "TARDIS 3.0.0-alpha";
             addin(response.answer||"Извините я не понял");
-            message.value = "";
         }, 500);
     }
 });
