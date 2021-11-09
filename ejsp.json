@@ -7,12 +7,16 @@
             "ru-ru":{
                 "theme":"Темная/светлая тема",
                 "planner":"Планировщик",
-                "tardis":"ТАРДИС"
+                "tardis":"ТАРДИС",
+                "send":"Отправить",
+                "message":"Сообщение"
             },
             "en-us":{
                 "theme":"Dark/Light theme",
                 "planner":"Planner",
-                "tardis":"TARDIS"
+                "tardis":"TARDIS",
+                "send":"Send",
+                "message":"Message"
             }
         }
     }
