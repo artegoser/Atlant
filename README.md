@@ -6,7 +6,7 @@ Tardis is being developed to simplify your life.
 ## TODO
 
 ### Language model  
-- [ ] - Stage 0.1. Make a gui client to customize the model
+- [X] - Stage 0.1. Make a gui client to customize the model
 - [ ] - Stage 1. Training of the conversational model Tardis.
 - [ ] - Stage 2. Training Language Model to perform various commands.
 ### Auxiliary modules  
