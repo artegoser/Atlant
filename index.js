@@ -1,6 +1,12 @@
-const { app, BrowserWindow, Tray } = require("electron");
-let tray = null;
+const { app, BrowserWindow, Tray, ipcMain } = require("electron");
+const path = require("path");
 
+let tray;
+
+
+ipcMain.on('reloadpls', (event, arg) => {
+
+})
 
 const SIZE = {
   x: 695,

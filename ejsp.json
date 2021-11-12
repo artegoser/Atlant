@@ -7,12 +7,30 @@
             "ru-ru":{
                 "theme":"Темная/светлая тема",
                 "planner":"Планировщик",
-                "tardis":"ТАРДИС"
+                "tardis":"ТАРДИС",
+                "send":"Отправить",
+                "message":"Сообщение",
+                "nlpeditor":"Редактор NLP",
+                "add":"Добавить",
+                "type":"Тип",
+                "questions":"Вопросы",
+                "answers":"Ответы",
+                "ru":"Русский",
+                "en":"Английский"
             },
             "en-us":{
                 "theme":"Dark/Light theme",
                 "planner":"Planner",
-                "tardis":"TARDIS"
+                "tardis":"TARDIS",
+                "send":"Send",
+                "message":"Message",
+                "nlpeditor":"NLP Editor",
+                "add":"Add",
+                "type":"Type",
+                "questions":"Questions",
+                "answers":"Answers",
+                "ru":"Russian",
+                "en":"English"
             }
         }
     }

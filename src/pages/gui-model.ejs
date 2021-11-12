@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <%- include("../components/bootstrap") %> 
+        <%- include("../components/head") %> 
+        <title>T.A.R.D.I.S. 3</title>
+        <script src="../js/gui-model.js"></script>
+    </head>
+    <body>
+        <%- include("../components/menu") %>
+        <div class="container text-center">
+            <div class="row m-2">
+                <div class="col">
+                    <select id="lang" class="form-select bordert">
+                        <option value="ru"><%-locales[lang].ru%></option>
+                        <option value="en"><%-locales[lang].en%></option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select id="typeofm" class="form-select bordert">
+                        <option value="questions"><%-locales[lang].questions%></option>
+                        <option value="answers"><%-locales[lang].answers%></option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="text" id="type" placeholder="<%-locales[lang].type%>" class="form-control bordert">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-5 mt-5">
+                        <input type="text" id="item" class="form-control bordert">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success borderright" id="send" placeholder="<%-locales[lang].message%>" type="submit"><%-locales[lang].add%></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
