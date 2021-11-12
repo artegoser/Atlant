@@ -6,6 +6,8 @@ compiler(manager, dataset);
 
 window.addEventListener("load", ()=>{
     document.getElementById("send").onclick = () => {
-        dataset[document.getElementById()]
+        dataset[document.getElementById("typeofm").value][document.getElementById("lang").value][document.getElementById("type").value].push(document.getElementById("item").value)
+        fs.writeFileSync("./td-2.0.json", JSON.stringify(dataset, null, "  "));
+        compiler(manager, dataset);
     }
 });
