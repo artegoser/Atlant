@@ -9,14 +9,28 @@
                 "planner":"Планировщик",
                 "tardis":"ТАРДИС",
                 "send":"Отправить",
-                "message":"Сообщение"
+                "message":"Сообщение",
+                "nlpeditor":"Редактор NLP",
+                "add":"Добавить",
+                "type":"Тип",
+                "questions":"Вопросы",
+                "answers":"Ответы",
+                "ru":"Русский",
+                "en":"Английский"
             },
             "en-us":{
                 "theme":"Dark/Light theme",
                 "planner":"Planner",
                 "tardis":"TARDIS",
                 "send":"Send",
-                "message":"Message"
+                "message":"Message",
+                "nlpeditor":"NLP Editor",
+                "add":"Add",
+                "type":"Type",
+                "questions":"Questions",
+                "answers":"Answers",
+                "ru":"Russian",
+                "en":"English"
             }
         }
     }
