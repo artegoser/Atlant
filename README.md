@@ -8,7 +8,7 @@ Tardis is being developed to simplify your life.
 ### Language model  
 - [X] - Stage 0.1. Make a gui client to customize the model
 - [ ] - Stage 1. Training of the conversational model Tardis.
-- [ ] - Stage 2. Training Language Model to perform various commands.
+- [ ] - Stage 2. Make a commands Model to perform various commands.
 ### Auxiliary modules  
 - [ ] - Notes
 - [ ] - Services Manager (Services system as in Windows, but without having to adapt to Windows Services API)
