@@ -1,5 +1,6 @@
 const Downloader = require("../js/downloader");
 let downloader = new Downloader();
+const fs = require("fs");
 
 window.addEventListener("load",async ()=>{
     function updateinf(perc, proc){
@@ -20,8 +21,19 @@ window.addEventListener("load",async ()=>{
         updateinf(100, procname);
         clearInterval(percentupdate);
     }
+    function compilemodel(){
+        let procname = "Compiling lang model"
+        const { NlpManager } = require('node-nlp');
+        const manager = new NlpManager({ languages: ['ru', 'en']});
+        let compiler = require("../js/nlp-compiler");
+        let dataset = JSON.parse(fs.readFileSync("./td-2.0.json", "utf-8"));
+        updateinf(0, procname);
+        compiler(manager, dataset);
+        updateinf(100, procname);
+    }
 
     await downloadmodel();
-    // updateinf(100, "Done...")
-    setInterval(()=>window.location.replace("./index.html"), 2000);
+    compilemodel();
+    updateinf(100, "Done...")
+    window.location.replace("./index.html");
 });

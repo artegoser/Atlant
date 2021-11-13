@@ -11,7 +11,7 @@ window.addEventListener("load", ()=>{
     }
     updatetypes();
     document.getElementById("send").onclick = () => {
-        dataset.usermodufied = true;
+        dataset.usermodified = true;
         dataset[document.getElementById("typeofm").value][document.getElementById("lang").value][document.getElementById("type").value] = dataset[document.getElementById("typeofm").value][document.getElementById("lang").value][document.getElementById("type").value] || [];
         dataset[document.getElementById("typeofm").value][document.getElementById("lang").value][document.getElementById("type").value].push(document.getElementById("item").value)
         fs.writeFileSync("./td-2.0.json", JSON.stringify(dataset, null, "  "));
