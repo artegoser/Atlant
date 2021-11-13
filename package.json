@@ -30,6 +30,7 @@
     "electron": "^13.6.1"
   },
   "dependencies": {
+    "node-fetch": "^2.6.6",
     "node-nlp": "^3.10.2"
   }
 }

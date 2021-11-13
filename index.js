@@ -1,12 +1,7 @@
-const { app, BrowserWindow, Tray, ipcMain } = require("electron");
+const { app, BrowserWindow, Tray } = require("electron");
 const path = require("path");
 
 let tray;
-
-
-ipcMain.on('reloadpls', (event, arg) => {
-
-})
 
 const SIZE = {
   x: 695,
@@ -30,8 +25,8 @@ app.on("ready", () => {
     win.webContents.openDevTools();
     win.removeMenu();
   });
-  win.loadURL(`file://${__dirname}/build/pages/index.html`);
-  
+  win.loadURL(`file://${__dirname}/build/pages/loader.html`);
+
   tray.on('click', function(e){
     if (win.isVisible()) {
       win.hide();

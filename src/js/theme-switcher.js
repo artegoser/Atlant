@@ -1,4 +1,4 @@
-let fs = require("fs");
+const fs = require("fs");
 
 window.addEventListener("load", ()=>{
     let switcher = document.getElementById("theme-switcher");
