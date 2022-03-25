@@ -27,7 +27,7 @@
   "homepage": "https://github.com/artegoser/tardis-v3#readme",
   "devDependencies": {
     "ejsp": "^1.1.3",
-    "electron": "^13.6.1",
+    "electron": "^13.6.6",
     "electron-builder": "^22.13.1"
   },
   "dependencies": {
